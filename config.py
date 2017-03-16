@@ -3,7 +3,6 @@ import pymysql
 
 class Config(object):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(os.getcwd(), 'data.db')
-    # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root@localhost:3306/datadb?charset=utf8mb4'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     # DATABASE = '/tmp/test.db'
     TESTING = False
@@ -13,7 +12,7 @@ class Config(object):
     PASSWORD = '123'
 
 class ProductionConfig(Config):
-    pass
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root@localhost:3306/datadb?charset=utf8mb4'
 
 class DevelopmentConfig(Config):
     DEBUG = True

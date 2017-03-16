@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from apps import models, test, qiniu
+from apps import models, test, qiniu, account
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -13,6 +13,7 @@ test.register(app)
 # your own module
 # eazy_login.register(app)
 # flaskr.register(app)
+account.register(app)
 qiniu.register(app)
 
 
