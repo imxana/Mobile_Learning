@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from apps import *
+from apps import models, test, qiniu
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)

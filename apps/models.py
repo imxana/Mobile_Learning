@@ -172,6 +172,8 @@ def register(app):
         g.User = User
         g.Post = Post
         g.Category = Category
+        g.Resource = Resource
+        g.ResourceType = ResourceType
 
     # @app.teardown_request
     # def teardown_request():

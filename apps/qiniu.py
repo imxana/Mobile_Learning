@@ -17,12 +17,16 @@ def register(app):
         'callbackBody':'filename=$(fname)&filesize=$(fsize)'
         """
         name = request.values.get('filename', '')
+
         if name == '':
             return jsonify({'code':0})
         url = qiniu_setting['bucket_domain'] + name
-     
-        g.db.session.add(Resource(name,url,None))
-        g.db.session.commit()
+
+        # name existed
+        resource = g.User.query.filter_by(name=request.form['name']).first()
+        if not bool(resource):
+            g.db.session.add(g.Resource(name, url, None))
+            g.db.session.commit()
         
         return jsonify({
             'code': 1,

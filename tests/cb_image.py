@@ -17,8 +17,7 @@ key = 'my-python-logo3.png';
 
 #上传文件到七牛后， 七牛将文件名和文件大小回调给业务服务器。
 policy={
-    # 'callbackUrl':'http://139.129.24.151:5000/image/upload',
-    'callbackUrl':'http://220.184.60.200:5000/qiniu/upload',
+    'callbackUrl':'http://139.129.24.151:5000/qiniu/upload',
     # 'callbackUrl':'http://your.domain.com/callback.php',
     # 'callbackBody':'filename=$(fname)&filesize=$(fsize)'
     'callbackBody':'filename=$(key)&filesize=$(fsize)'
