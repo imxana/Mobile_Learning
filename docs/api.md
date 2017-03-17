@@ -1,11 +1,9 @@
 ## 目录
 
-* [接口测试 ./test/api](#apitest)
-* [登录 ./signin](#signin)
-* [注册 ./signup](#signup)
-* [上传资源(七牛回调) ./qiniu/upload](#upload)
-
-<span id="apitest"></span>
+* [接口测试 ./test/api](#接口测试-testapi)
+* [登录 ./signin](#登录-signin)
+* [注册 ./signup](#注册-signup)
+* [上传资源(七牛回调) ./qiniu/upload](#上传资源七牛回调-qiniuupload)
 
 ## 接口测试 ./test/api
 
@@ -13,7 +11,6 @@ methods: GET, POST
 
 return html|str 
 
-<span id="signin"></span>
 
 ## 登录 ./signin
 
@@ -31,7 +28,6 @@ return
 code|int|0
 error|str|'Invalid username'
 
-<span id="signup"></span>
 
 ## 注册 ./signup
 
@@ -50,7 +46,6 @@ return
 code|int|0
 error|str|'Invalid username'
 
-<span id="upload"></span>
 
 ## 上传资源(七牛回调) ./qiniu/upload
 
